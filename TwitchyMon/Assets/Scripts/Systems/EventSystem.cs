@@ -14,7 +14,6 @@ public static class EventSystem {
     public static event VoidWithNoParams TestEvent;
     public static event VoidWithNoParams BeginBattle;
 
-
     public static void TriggerTestEvent()
     {
         if (TestEvent != null)

@@ -10,4 +10,5 @@ public class Attack : MonoBehaviour {
     public float BaseDamage;
     public AttackType Type;
 
+    // ADD FIELDS AS NECESSARY
 }
