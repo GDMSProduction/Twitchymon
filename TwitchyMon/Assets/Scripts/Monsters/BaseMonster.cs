@@ -2,15 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseMonster : MonoBehaviour {
+public abstract class BaseMonster : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // MONSTER ATTRIBUTES
+    protected string Name;
+    protected int Level;
+    protected int Experience;
+    protected int AttackStock;
+
+    // BATTLE STATS
+    protected float Health;
+    protected float Attack;
+    protected float Defense;
+    protected float Speed;
+
+    // ATTACKS AND ATTACK STOCK
+    protected Attack[] EquippedAttacks;
+    protected List<Attack> AttackInventory;
+
+    protected abstract void PerformAttack();
+
+    protected abstract void HitByAttack(Attack _attack);
 }
