@@ -17,10 +17,10 @@ public abstract class BaseMonster : MonoBehaviour {
     protected float Speed;
 
     // ATTACKS AND ATTACK STOCK
-    protected Attack[] EquippedAttacks;
-    protected List<Attack> AttackInventory;
+    public Attack[] EquippedAttacks;
+    public List<Attack> AttackInventory;
 
-    protected abstract void PerformAttack();
+    public abstract void PerformAttack();
 
-    protected abstract void HitByAttack(Attack _attack);
+    public abstract void HitByAttack(Attack _attack);
 }
