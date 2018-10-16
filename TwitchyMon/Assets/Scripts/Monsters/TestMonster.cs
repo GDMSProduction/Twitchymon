@@ -30,6 +30,7 @@ public class TestMonster : BaseMonster {
         Experience = _exp;
     }
 
+    // public variable for use in the inspector
     public KeyCode key;
 
 	// Use this for initialization
@@ -38,7 +39,9 @@ public class TestMonster : BaseMonster {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        // testing separate keys to simulate separate players attacking
         if (Input.GetKeyDown(key))
         {
             if (this.GetComponent<Attack>())
@@ -55,6 +58,7 @@ public class TestMonster : BaseMonster {
 
     public override void HitByAttack(Attack _attack)
     {
+        // just to test attacking damage -> health deduction
         Health -= _attack.BaseDamage;
         print("Health : " + Health);
     }
