@@ -11,4 +11,5 @@ public class Attack : MonoBehaviour {
     public AttackType Type;
 
     // ADD FIELDS AS NECESSARY
+
 }

@@ -5,22 +5,25 @@ using UnityEngine;
 public abstract class BaseMonster : MonoBehaviour {
 
     // MONSTER ATTRIBUTES
-    protected string Name;
-    protected int Level;
-    protected int Experience;
-    protected int AttackStock;
+    public string Name { get; set; }
+    public int Level { get; set; }
+    public int Experience { get; set; }
+    public int AttackStock { get; set; }
 
     // BATTLE STATS
-    protected float Health;
-    protected float Attack;
-    protected float Defense;
-    protected float Speed;
+    public float Health { get; set; }
+    public float Attack { get; set; }
+    public float Defense { get; set; }
+    public float Speed { get; set; }
 
     // ATTACKS AND ATTACK STOCK
     public Attack[] EquippedAttacks;
     public List<Attack> AttackInventory;
 
+    public List<BaseMonster> enemyMonsters;
+
     public abstract void PerformAttack();
 
     public abstract void HitByAttack(Attack _attack);
+    
 }
