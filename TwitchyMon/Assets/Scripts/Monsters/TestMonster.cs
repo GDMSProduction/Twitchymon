@@ -29,7 +29,8 @@ public class TestMonster : BaseMonster {
         Level = _level;
         Experience = _exp;
     }
-    
+
+    public KeyCode key;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +39,13 @@ public class TestMonster : BaseMonster {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKeyDown(key))
+        {
+            if (this.GetComponent<Attack>())
+            {
+                HitByAttack(this.GetComponent<Attack>());
+            }
+        }
 	}
 
     public override void PerformAttack()
@@ -48,6 +55,7 @@ public class TestMonster : BaseMonster {
 
     public override void HitByAttack(Attack _attack)
     {
-
+        Health -= _attack.BaseDamage;
+        print("Health : " + Health);
     }
 }
